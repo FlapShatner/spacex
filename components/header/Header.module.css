@@ -1,0 +1,13 @@
+/* Logo */
+
+.logo {
+    position: absolute;
+    width: 200px;
+    height: 27px;
+    left: 25px;
+    top: .75rem;
+    fill: #fff;
+
+}
+
+/* End Logo */
