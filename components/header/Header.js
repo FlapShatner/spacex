@@ -34,12 +34,13 @@ export default function Header() {
     <header
       className={`${styles.mainHeader} header ${scrollPosition > 199 && direction === 'down' ? 'hide' : 'show'} `}>
       <div className={`headerBg ${showBg && 'isOpen'} `}></div>
-      <Link href='/'>
-        <div className={styles.logo}>
-          <Logo />
-        </div>
-      </Link>
-      <nav className={styles.navBar}>
+      <div className={styles.headerInner}>
+        <Link href='/'>
+          <div className={styles.logo}>
+            <Logo />
+          </div>
+        </Link>
+
         <ul className={styles.navLeft}>
           <li>
             <Link href='/vehicles/falcon-9'>FALCON 9</Link>
@@ -63,15 +64,16 @@ export default function Header() {
             <Link href='www.starlink.com'>STARLINK</Link>
           </li>
         </ul>
-        <ul className={styles.navRight}>
-          <li>
-            <Link href='shop.spacex.com'>SHOP</Link>
-          </li>
-          <div className={styles.hamburger}>
-            <Hamburger size={16} direction='left' label='Show menu' />
-          </div>
-        </ul>
-      </nav>
+      </div>
+      <ul className={styles.navRight}>
+        <li>
+          <Link href='shop.spacex.com'>SHOP</Link>
+        </li>
+        <div className={styles.hamburger}>
+          <Hamburger size={16} direction='left' label='Show menu' />
+        </div>
+      </ul>
+
       <style jsx>{`
         .header {
           transition: opacity 0.3s ease;

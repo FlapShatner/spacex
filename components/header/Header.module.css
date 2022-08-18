@@ -11,46 +11,58 @@
 
 .mainHeader {
     display: flex;
-    position: relative;
+    /* position: relative; */
     width: 100%;
     margin: 0 1fr;
     position: fixed;
+    justify-content: space-between;
 
 }
 
 .mainHeader ul {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 .mainHeader li {
     font-size: var(--fs-small);
     font-weight: 400;
-    margin-inline: 12px;
+    margin-inline: .9rem;
     position: relative;
 }
 
-.navBar {
+.headerInner {
+    position: relative;
     width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.navLeft {
+    width: max-content;
     display: flex;
     justify-content: space-between;
-    margin-left: 290px;
+    margin-left: 275px;
     margin-block: 2rem;
 }
 
 .navRight {
     position: relative;
     width: 8rem;
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+
 }
 
 .hamburger {
-    position: absolute;
-    left: 4rem;
-    bottom: -14px;
+    position: relative;
+
 }
 
 /* Menu Items Animation */
-.navBar a::after {
+.navLeft a::after,
+.navRight a::after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -63,7 +75,8 @@
     transform-origin: right center;
 }
 
-.navBar a:hover::after {
+.navLeft a:hover::after,
+.navRight a:hover::after {
     transform: scaleX(1);
     transform-origin: left center;
     transition-duration: 0.4s;

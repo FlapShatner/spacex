@@ -1,0 +1,30 @@
+.footer {
+    width: 100%;
+    height: 6.5rem;
+    background-color: #000;
+    display: flex;
+    align-items: center;
+}
+
+
+
+
+.footer ul {
+    display: flex;
+    width: max-content;
+    margin: 0 auto;
+}
+
+#copyright {
+    opacity: .5;
+}
+
+.footer ul li {
+    font-size: var(--fs-xsmall);
+    margin-inline: 1.35rem;
+    transition: opacity .4s;
+}
+
+.footer ul li:hover {
+    opacity: .5;
+}
