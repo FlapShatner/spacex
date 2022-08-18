@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import styles from './Header.module.css'
 import Logo from './Logo'
-import { Twirl as Hamburger } from 'hamburger-react'
 
 import Link from 'next/link'
 
@@ -61,17 +60,14 @@ export default function Header() {
             <Link href='/vehicles/rideshare'>RIDESHARE</Link>
           </li>
           <li>
-            <Link href='www.starlink.com'>STARLINK</Link>
+            <a href='https://www.starlink.com'>STARLINK</a>
           </li>
         </ul>
       </div>
       <ul className={styles.navRight}>
         <li>
-          <Link href='shop.spacex.com'>SHOP</Link>
+          <a href='https://shop.spacex.com'>SHOP</a>
         </li>
-        <div className={styles.hamburger}>
-          <Hamburger size={16} direction='left' label='Show menu' />
-        </div>
       </ul>
 
       <style jsx>{`

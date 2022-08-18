@@ -55,10 +55,7 @@
 
 }
 
-.hamburger {
-    position: relative;
 
-}
 
 /* Menu Items Animation */
 .navLeft a::after,
@@ -80,4 +77,14 @@
     transform: scaleX(1);
     transform-origin: left center;
     transition-duration: 0.4s;
+}
+
+@media screen and (max-width: 1120px) {
+    .navLeft {
+        margin-left: 245px;
+    }
+
+    .mainHeader li {
+        margin-inline: .5rem;
+    }
 }
