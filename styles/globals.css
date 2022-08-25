@@ -82,10 +82,14 @@ a {
 
   --fs-xsmall: .75rem;
   --fs-small: .875rem;
+  --fs-default: 1rem;
   --fs-medium: 1.25rem;
   --fs-large: 3rem;
   --fs-xlarge: 6.25rem;
   --fs-xxlarge: 8.75rem;
+
+  --clr-border: hsl(0 0% 30% / 0.5);
+  --clr-gray: hsl(0, 0%, 50%);
 
 }
 

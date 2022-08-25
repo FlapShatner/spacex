@@ -85,7 +85,7 @@ function Drawer({ isOpen }) {
           text-align: end;
           padding-block: 0.5rem;
           opacity: inherit;
-          border-bottom: 1px solid hsl(0 0% 30% / 0.5);
+          border-bottom: 1px solid var(--clr-border);
           transform: ${isOpen ? 'translateY(0px)' : 'translateY(4px)'};
           transition: 1s ease;
         }
