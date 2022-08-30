@@ -86,24 +86,24 @@ function Drawer({ isOpen }) {
           padding-block: 0.5rem;
           opacity: inherit;
           border-bottom: 1px solid var(--clr-border);
-          transform: ${isOpen ? 'translateY(0px)' : 'translateY(4px)'};
+          transform: ${isOpen ? 'translateY(0px)' : 'translateY(8px)'};
           transition: 1s ease;
         }
 
         .num0 {
-          transition: 0.3s ease ${isOpen ? '0.4s' : '0'};
+          transition: 0.3s ease ${isOpen ? '0.3s' : '0'};
         }
         .num1 {
-          transition: 0.3s ease ${isOpen ? '0.5s' : '0'};
+          transition: 0.3s ease ${isOpen ? '0.35s' : '0'};
         }
         .num2 {
-          transition: 0.3s ease ${isOpen ? '0.6s' : '0'};
+          transition: 0.3s ease ${isOpen ? '0.4s' : '0'};
         }
         .num3 {
-          transition: 0.3s ease ${isOpen ? '0.7s' : '0'};
+          transition: 0.3s ease ${isOpen ? '0.45s' : '0'};
         }
         .shop {
-          transition: 0.3s ease ${isOpen ? '0.8s' : '0'};
+          transition: 0.3s ease ${isOpen ? '0.5s' : '0'};
         }
       `}</style>
     </div>
