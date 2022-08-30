@@ -2,7 +2,10 @@
 import Stats from '../../../components/stats-table/stats'
 import Play from '../../../components/common/Play'
 import Modal from '../../../components/Modal'
+import Engines from '../../../components/engines'
+import { motion, AnimatePresence } from 'framer-motion'
 import { useState } from 'react'
+import Carousel from '../../../components/Carousel'
 
 export default function Falcon9() {
   const falconStats = {
@@ -39,6 +42,25 @@ export default function Falcon9() {
       statImperial: ' 8,860 lb',
     },
   }
+
+  const engineStats = {
+    name: 'Merlin',
+    seaLevel: {
+      desc: 'Merlin is a family of rocket engines developed by SpaceX for use on its Falcon 1, Falcon 9 and Falcon Heavy launch vehicles. Merlin engines use a rocket grade kerosene (RP-1) and liquid oxygen as rocket propellants in a gas-generator power cycle. The Merlin engine was originally designed for recovery and reuse.',
+      propel: 'LOX',
+      propelGray: ' / RP-1',
+      thrust: '845 kN',
+      thrustGray: ' / 190,000 lbf',
+      imgUrl: '/img/Merlin.webp',
+    },
+    vacuum: {
+      desc: 'Merlin Vacuum features a larger exhaust section and a significantly larger expansion nozzle to maximize the engine’s efficiency in the vacuum of space. Its combustion chamber is regeneratively cooled, while the expansion nozzle is radiatively cooled. At full power, the Merlin Vacuum engine operates with the greatest efficiency ever for an American-made hydrocarbon rocket engine.',
+      propel: 'LOX / RP-1',
+      thrust: '981 kN / 220,500 lbf',
+      imgUrl: '/img/MerlinVac.webp',
+    },
+  }
+
   const [showModal, setShowModal] = useState(false)
 
   return (
@@ -87,6 +109,10 @@ export default function Falcon9() {
           <h3>Falcon 9 In Flight</h3>
         </div>
       </section>
+
+      <Engines engineStats={engineStats} />
+      <Carousel />
+
       <Modal eid={'Z4TXCZG_NEY'} onClose={() => setShowModal(false)} show={showModal} />
 
       <style jsx>{`
