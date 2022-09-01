@@ -1,5 +1,5 @@
 import useEmblaCarousel from 'embla-carousel-react'
-import { useEffect, useCallback } from 'react'
+import { useCallback } from 'react'
 import Prev from './common/Prev'
 import Next from './common/Next'
 

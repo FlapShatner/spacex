@@ -1,4 +1,4 @@
-export default function Stats(props) {
+export default function Overview(props) {
   const stats = props.stats
 
   return (
