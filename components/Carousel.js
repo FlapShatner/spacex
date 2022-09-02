@@ -21,7 +21,7 @@ export default function Carousel({ slidesArr, imgPath }) {
           <div className='embla__viewport' ref={emblaRef}>
             <div className='embla__container'>
               {slidesArr.map((desc, i) => (
-                <div className='embla__slide'>
+                <div key={i} className='embla__slide'>
                   <img className='slideImg' src={imgPath + i + '.webp'} alt={desc} />
                   <div className='description'>
                     <p>{desc}</p>

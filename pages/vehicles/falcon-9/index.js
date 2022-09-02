@@ -1,5 +1,5 @@
 // import styles from './falcon-9.module.css'
-import Overview from '../../../components/stats/Overview'
+import Overview from '../../../components/statSlider/Overview'
 
 import Engines from '../../../components/engines'
 import { motion, AnimatePresence } from 'framer-motion'
@@ -10,7 +10,7 @@ import { Counter } from '../../../components/Counter'
 import { PageFooter } from '../../../components/PageFooter'
 import { Hero } from '../../../components/Hero'
 import Video from '../../../components/Video'
-import { Reveal } from '../../../components/stats/Reveal'
+import { Reveal } from '../../../components/statSlider/Reveal'
 
 export default function Falcon9() {
   const { slidesArr, imgPath, counterStats, engineStats, falconStats, revealData, heroData, videoData } = falconData
@@ -19,22 +19,17 @@ export default function Falcon9() {
     <>
       <Hero heroData={heroData} />
       <Counter counterStats={counterStats} />
-      <div className='info'>
-        <Reveal revealData={revealData} />
+
+      {/* <Overview stats={falconStats} /> */}
+
+      <Reveal stats={falconStats} revealData={revealData}>
         <Overview stats={falconStats} />
-      </div>
+      </Reveal>
+
       <Video videoData={videoData} />
       <Engines engineStats={engineStats} />
       <Carousel imgPath={imgPath} slidesArr={slidesArr} />
       <PageFooter />
-      <style jsx>
-        {`
-          .info {
-            position: relative;
-            height: 200vh;
-          }
-        `}
-      </style>
     </>
   )
 }

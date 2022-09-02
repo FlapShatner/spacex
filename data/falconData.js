@@ -18,6 +18,7 @@ const revealData = {
 }
 
 const falconStats = {
+  imgUrl: '/img/f9/f9-render.webp',
   vehicle: 'Falcon 9',
   heading: 'Overview',
   height: {
