@@ -1,12 +1,28 @@
+import { motion, useScroll, useTransform } from 'framer-motion'
+import { useEffect, useRef } from 'react'
+
 export function Hero({ heroData }) {
+  const ref = useRef(null)
   const { title, tagline, bg } = heroData
+
+  const { scrollYProgress } = useScroll({
+    target: ref,
+    offset: ['center center', 'start start'],
+  })
+
+  const opacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
+
   return (
     <>
       <section className='hero'>
-        <div className='wrapper'>
+        <motion.div
+          ref={ref}
+          style={{ opacity: opacity }}
+          transition={{ duration: 0.5, ease: 'easeInOut' }}
+          className='wrapper'>
           <h1>{title}</h1>
-          <h4>{tagline}</h4>
-        </div>
+          <motion.h4>{tagline}</motion.h4>
+        </motion.div>
       </section>
       <style jsx>
         {`
