@@ -20,16 +20,16 @@ const { className, styles } = css.resolve`
 export function Reveal({ revealData, children }) {
   const ref = useRef(null)
   const { description, revealBg } = revealData
+
   const { scrollYProgress } = useScroll({
     target: ref,
     offset: ['center end', 'center start'],
   })
 
   const yPos = scrollYProgress
-
+  const opacity = useTransform(yPos, [0, 0.5, 0.75, 1], [1, 1, 0, 0])
   const position = useTransform(yPos, [0, 1], ['0vh', '100vh'])
   const negPos = useTransform(yPos, [0, 1], ['0vh', '-100vh'])
-  const opacity = useTransform(yPos, [0, 0.5, 0.75, 1], [1, 1, 0, 0])
 
   return (
     <>

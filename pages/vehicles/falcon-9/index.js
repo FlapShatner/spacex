@@ -11,9 +11,11 @@ import { PageFooter } from '../../../components/PageFooter'
 import { Hero } from '../../../components/Hero'
 import Video from '../../../components/Video'
 import { Reveal } from '../../../components/statSlider/Reveal'
+import FirstStage from '../../../components/statSlider/FirstStage'
 
 export default function Falcon9() {
-  const { slidesArr, imgPath, counterStats, engineStats, falconStats, revealData, heroData, videoData } = falconData
+  const { slidesArr, imgPath, counterStats, engineStats, falconStats, revealData, heroData, videoData, fSData } =
+    falconData
 
   return (
     <>
@@ -25,6 +27,7 @@ export default function Falcon9() {
       <Reveal stats={falconStats} revealData={revealData}>
         <Overview stats={falconStats} />
       </Reveal>
+      <FirstStage data={fSData} />
 
       <Video videoData={videoData} />
       <Engines engineStats={engineStats} />
