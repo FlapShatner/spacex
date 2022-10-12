@@ -1,7 +1,7 @@
 // import styles from './falcon-9.module.css'
 import Overview from '../../../components/statSlider/Overview'
 
-import Engines from '../../../components/engines'
+import Engines from '../../../components/Engines'
 import { motion, AnimatePresence } from 'framer-motion'
 
 import Carousel from '../../../components/Carousel'
