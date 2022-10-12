@@ -106,8 +106,11 @@ export default function FirstStage({ data }) {
 function FsOverview({ data }) {
   return (
     <>
-      {data.map((p) => (
-        <p className={className}> {p}</p>
+      {data.map((p, i) => (
+        <p key={i} className={className}>
+          {' '}
+          {p}
+        </p>
       ))}
       {styles}
     </>
